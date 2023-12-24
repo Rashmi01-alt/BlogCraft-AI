@@ -13,14 +13,6 @@ dbconnect();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 
-// mongoose.connect(
-//   "mongodb://localhost:27017/AI",
-//   {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   }
- 
-// );
 
 app.use("/api/blogs", blogRoutes);
 
