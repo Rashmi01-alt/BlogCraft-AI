@@ -26,27 +26,27 @@ const Blog = require("../models/Blog");
          headers: {
            "Content-Type": "application/json",
            Authorization:
-             "Bearer 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",
+             "Bearer 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",
          },
        }
      );
-    //  const response = await axios.post(
-    //    "https://api.openai.com/v1/chat/completions",
-    //    {
-    //      model: "gpt-3.5-turbo",
-    //      messages: [
-    //        { role: "system", content: "You are a helpful assistant." },
-    //        { role: "user", content: content },
-    //      ],
-    //    },
-    //    {
-    //      headers: {
-    //        "Content-Type": "application/json",
-    //        Authorization:
-    //          "Bearer  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",
-    //      },
-    //    }
-    //  ); 
+     //  const response = await axios.post(
+     //    "https://api.openai.com/v1/chat/completions",
+     //    {
+     //      model: "gpt-3.5-turbo",
+     //      messages: [
+     //        { role: "system", content: "You are a helpful assistant." },
+     //        { role: "user", content: content },
+     //      ],
+     //    },
+     //    {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
+     //      headers: {
+     //        "Content-Type": "application/json",
+     //        Authorization:
+     //          "Bearer  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",
+     //      },
+     //    }
+     //  );
 
      const newBlog = new Blog({
        title,

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import BlogForm from "./components/BlogForm";
 import BlogList from "./components/BlogList";
+import styles from "./index.css";
 
 const App = () => {
   return (
