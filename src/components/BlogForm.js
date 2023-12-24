@@ -8,7 +8,10 @@ const BlogForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Call your backend API to handle the creation of blogs
-   const response =  await axios.post("http://localhost:5000/api/blogs/create", { title, content });
+    const response = await axios.post(
+      "http://localhost:5000/api/blogs/create",
+      { title, content }
+    );
     // Optionally, you can reset the form fields after submission
     setTitle("");
     setContent("");
