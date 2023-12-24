@@ -8,7 +8,7 @@ const BlogForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Call your backend API to handle the creation of blogs
-    await axios.post("/api/blogs", { title, content });
+   const response =  await axios.post("http://localhost:5000/api/blogs/create", { title, content });
     // Optionally, you can reset the form fields after submission
     setTitle("");
     setContent("");
@@ -42,7 +42,7 @@ const BlogForm = () => {
             Content
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3  text-blue-600 leading-tight focus:outline-none focus:shadow-outline"
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}

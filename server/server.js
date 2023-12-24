@@ -1,18 +1,26 @@
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const blogRoutes = require("./routes/blogRoutes");
+const { dbconnect } = require("./config/database");
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+const blogRoutes  = require("./routes/blogRoutes");
 
-app.use(cors());
+
+const PORT = 5000;
+dbconnect();
+
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://<YOUR_MONGODB_URI>", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect(
+//   "mongodb://localhost:27017/AI",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+ 
+// );
 
 app.use("/api/blogs", blogRoutes);
 
