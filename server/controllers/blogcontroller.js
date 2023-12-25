@@ -26,7 +26,7 @@ const Blog = require("../models/Blog");
          headers: {
            "Content-Type": "application/json",
            Authorization:
-             "Bearer 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",
+             "Bearer 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",
          },
        }
      );
@@ -38,7 +38,7 @@ const Blog = require("../models/Blog");
      //        { role: "system", content: "You are a helpful assistant." },
      //        { role: "user", content: content },
      //      ],
-     //    },
+     //    },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
      //    {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
      //      headers: {
      //        "Content-Type": "application/json",
