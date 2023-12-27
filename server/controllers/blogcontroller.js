@@ -1,5 +1,7 @@
 const axios = require("axios");
 const Blog = require("../models/Blog");
+require("dotenv").config();
+
 
  const  getAllBlogs = async (req, res) => {
     try {
@@ -25,8 +27,7 @@ const Blog = require("../models/Blog");
        {
          headers: {
            "Content-Type": "application/json",
-           Authorization:
-             "Bearer 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",
+           Authorization: "Bearer process.env.OPENAI_API_KEY",
          },
        }
      );
